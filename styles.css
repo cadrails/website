@@ -1,0 +1,229 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #374151; /* Softer gray */
+  line-height: 1.7;
+}
+
+body.loading .blueprint-icon {
+  clip-path: inset(0 100% 0 0);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #F9FAFB; /* Very light gray */
+  padding: 80px 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827; /* Darker text for contrast */
+  line-height: 1.2;
+}
+.hero-title .brand {
+  display: block;
+  font-size: 5rem;
+  color: #2563EB;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blueprint-icon {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  color: #3B82F6; /* Lighter Blue */
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 2.5s ease-in-out;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+.content-section.bg-light {
+  background-color: #F9FAFB;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1E40AF; /* Richer blue */
+}
+.section-text {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.0rem;
+  color: #4B5563; /* Softer gray */
+}
+
+/* Solutions Section */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.solution-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+.solution-icon {
+  font-size: 3rem;
+  color: #2563EB;
+  margin-bottom: 1.5rem;
+}
+
+/* Offering Section */
+.offering-details {
+  max-width: 750px;
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.offering-details p {
+  margin-bottom: 1rem;
+}
+
+/* Founders Section */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.founder-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+.founder-photo {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.founder-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563EB;
+}
+.founder-card h3 {
+  margin-bottom: 0.5rem;
+  color: #1E40AF;
+}
+
+/* Footer */
+.footer {
+  background: #F9FAFB;
+  color: #6B7280;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .blueprint-icon {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-item {
+    margin: 1.5rem 0;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .blueprint-icon {
+    font-size: 8rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+} 
